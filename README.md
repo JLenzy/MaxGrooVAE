@@ -3,7 +3,7 @@
 
 This repository contains a GrooVAE Max implementation, which is designed to take beat-emphasis information from the user,
 and return a "human-like" drum pattern that can be played and altered in real-time. The drum patterns will generally have a great deal
-of dynamics (variable velocity) and groove (non-quantized beats). It is utilising the GrooVAE model creataed by the Magenta team at Google.
+of dynamics (variable velocity) and groove (non-quantized beats).
 
 The Max device has 4 'banks' for storing rhythms; this means that playback in Ableton can continue
 uninterrupted whilst the python script develops new rhythms in the background. The user can instantly switch
@@ -20,20 +20,18 @@ It works only with 4-4 time signature for 2 bars with 1/16th note steps. The sys
 1) Install magenta: https://github.com/magenta/magenta
 (In our experience, this does not work on python versions above 3.7)
 
-Running Instructions:
-
-1) Activate the virtual environments and run the python code using
+2) Activate the virtual environments and run the python code using
 
 python MaxGrooVAE.py --send-ip=<Max IP> --send-port=<Max Port> --receive-ip=<Local IP> --receive-port=<Local port>
 (alternatively, run the program in an IDE where you will be prompted for the ports)
 
-2) Open the Max patch within Ableton and enter the corresponding ports/IP's
+3) Open the Max patch within Ableton and enter the corresponding ports/IP's
 
-3) Input rhythms in the GrooVAE sequencer, specify temperature and which groove banks to overwrite, and hit 'fire'
+4) Input rhythms in the GrooVAE sequencer, specify temperature and which groove banks to overwrite, and hit 'fire'
 
-4) If the OSC connection is succesful, it will 'de-active' the selected groove banks
+5) If the OSC connection is succesful, it will 'de-active' the selected groove banks
 
-5) Hit play in Ableton, and select which groove you want to hear (along with associated playback values)
+6) Hit play in Ableton, and select which groove you want to hear (along with associated playback values)
 
 
 
